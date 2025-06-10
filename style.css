@@ -49,7 +49,7 @@ body {
 
 .nav-links li a {
   text-decoration: none;
-  color: #ffffff;
+  color: #eeab47;
   font-weight: bold;
 }
 
@@ -59,7 +59,7 @@ body {
   background: none;
   border: none;
   cursor: pointer;
-  color: #fff;
+  color: #ffffff;
 }
 
 /* Responsividade */
