@@ -78,3 +78,15 @@ function atualizarCarrinho() {
 
 // Inicializa o carrinho salvo ao carregar
 atualizarCarrinho();
+// Botão hamburguer abre/fecha menu
+document.getElementById('menu-toggle').addEventListener('click', () => {
+  document.getElementById('nav-links').classList.toggle('active');
+});
+
+// Fecha menu ao clicar em um item (opcional e recomendado)
+document.querySelectorAll('#nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('nav-links').classList.remove('active');
+  });
+});
+
