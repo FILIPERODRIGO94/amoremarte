@@ -1,0 +1,209 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff9f5;
+  color: #333;
+}
+
+
+.navbar {
+  background-color: #bd7171;
+  padding: 1,5rem;
+  position: sticky;
+  top: 0;
+  box-shadow: 10px 0px 10px #bd7171;
+  z-index: 99;
+}
+
+.navbar > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.logo span {
+    color: #eeab47;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+nav li {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-icon-container {
+    display: flex;
+    align-items: center;
+}
+
+.nav-icon-container img {
+    width: 30px;
+    cursor: pointer;
+}
+
+.nav-icon-container img:first-child{
+    margin-right: 1rem;
+}
+
+nav ul a {
+    color: #fff;
+    margin-right: 1.5rem;
+    cursor: pointer;
+}
+
+nav ul a:hover {
+    transform: translateY(-5px);
+    transition: all 0.2s;
+    font-weight: bold;
+}
+
+.menu-button {
+    display: none;
+}
+
+
+.hero {
+  background-color: #fae1dd;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.hero h2 {
+  font-size: 2em;
+  color: #6a4e42;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+section {
+  padding: 100px 60px;
+}
+
+.produtos h3, .sobre h3, .contato h3, .carrinho h3 {
+  color: #6a4e42;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.produto {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  width: 220px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.produto:hover {
+  transform: scale(1.05);
+}
+
+.produto img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.produto button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #6a4e42;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.produto button:hover {
+  background-color: #4e352d;
+}
+#link-whatsapp button {
+  background-color: #ffffff; 
+  color: #095f28; 
+  border: none;
+  padding: 6px 12px;
+  margin-top: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#link-whatsapp button:hover {
+  background-color: #88d3a5;
+}
+
+footer {
+  background-color: #e8d1c5;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9em;
+  color: #6a4e42;
+}
+
+form input, form textarea {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #6a4e42;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.limpar-carrinho {
+  background-color: #fcf7f7;
+  color: rgb(243, 57, 57);
+  border: none;
+  padding: 6px 12px;
+  margin-top: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.limpar-carrinho:hover {
+  background-color: #f7abab;
+}
+
+form button:hover {
+  background-color: #4e352d;
+}
+.remover-item {
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  margin-left: 5px;
+  padding: 4px 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.remover-item:hover {
+  background-color: #cc0000;
+}

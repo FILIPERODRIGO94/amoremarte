@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Amor em Arte - Presentes Personalizados</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="navbar">
+        <div class="header-inner-content">
+            <h1 class="logo">Amor em <span>Arte</span></h1>
+            <nav>
+                <ul>
+                    <a href="#hero">Início</a>
+                    <a href="#produtos">Produtos</a>
+                    <a href="#contato">Contato</a>
+                    <a href="#carrinho">Carrinho (<span id="contador">0</span>)</a>
+                </ul>
+            </nav>
+            <div class="nav-icon-container">
+                <a href="#carrinho"><img src="img/cart.png" href="#carrinho"/></a>
+                <img src="img/menu.png" class="menu-button" alt="Menu"/>
+            </div>
+        </div>
+    </div>
+
+  <section id="hero" class="hero">
+    <h2>Presentes feitos com carinho e personalidade</h2>
+    <p>Transforme momentos em lembranças únicas 💝</p>
+  </section>
+
+  <section id="produtos" class="produtos">
+    <h3>Nossos Produtos</h3>
+    <div class="grid">
+      <div class="produto">
+        <img src="kit 1.jpg" alt="Caneca Personalizada">
+        <h4>Kit Luminária</h4>
+        <p>R$ 39,90</p>
+        <button onclick="adicionarAoCarrinho('Caneca Floral', 39.90)">Adicionar ao Carrinho</button>
+      </div>
+      <div class="produto">
+        <img src="kit 2.jpg" alt="Quadro Personalizado">
+        <h4>Kit Casal Love</h4>
+        <p>R$ 59,90</p>
+        <button onclick="adicionarAoCarrinho('Quadro Amor', 59.90)">Adicionar ao Carrinho</button>
+      </div>
+       <div class="produto">
+        <img src="kit 3.jpg" alt="Caneca Personalizada">
+        <h4>Kit Casal Cubo</h4>
+        <p>R$ 39,90</p>
+        <button onclick="adicionarAoCarrinho('Caneca Floral', 39.90)">Adicionar ao Carrinho</button>
+      </div>
+       <div class="produto">
+        <img src="kit 4.jpg" alt="Caneca Personalizada">
+        <h4>Kit Casal Fortaleza</h4>
+        <p>R$ 39,90</p>
+        <button onclick="adicionarAoCarrinho('Caneca Floral', 39.90)">Adicionar ao Carrinho</button>
+      </div>
+       <div class="produto">
+        <img src="caneca.jpg" alt="Caneca Personalizada">
+        <h4>Caneca Floral</h4>
+        <p>R$ 39,90</p>
+        <button onclick="adicionarAoCarrinho('Caneca Floral', 39.90)">Adicionar ao Carrinho</button>
+      </div>
+       <div class="produto">
+        <img src="caneca.jpg" alt="Caneca Personalizada">
+        <h4>Caneca Floral</h4>
+        <p>R$ 39,90</p>
+        <button onclick="adicionarAoCarrinho('Caneca Floral', 39.90)">Adicionar ao Carrinho</button>
+      </div>
+       <div class="produto">
+        <img src="caneca.jpg" alt="Caneca Personalizada">
+        <h4>Caneca Floral</h4>
+        <p>R$ 39,90</p>
+        <button onclick="adicionarAoCarrinho('Caneca Floral', 39.90)">Adicionar ao Carrinho</button>
+      </div>
+       <div class="produto">
+        <img src="caneca.jpg" alt="Caneca Personalizada">
+        <h4>Caneca Floral</h4>
+        <p>R$ 39,90</p>
+        <button onclick="adicionarAoCarrinho('Caneca Floral', 39.90)">Adicionar ao Carrinho</button>
+      </div>
+       <div class="produto">
+        <img src="quadro.jpg" alt="Caneca Personalizada">
+        <h4>Quadro Love</h4>
+        <p>R$ 59,90</p>
+        <button onclick="adicionarAoCarrinho('Caneca Floral', 55.90)">Adicionar ao Carrinho</button>
+      </div>
+       <div class="produto">
+        <img src="quadro 3.jpg" alt="Caneca Personalizada">
+        <h4>Quadro Photo</h4>
+        <p>R$ 55,90</p>
+        <button onclick="adicionarAoCarrinho('Caneca Floral', 55.90)">Adicionar ao Carrinho</button>
+      </div>
+       <div class="produto">
+        <img src="quadro 2.jpeg" alt="Caneca Personalizada">
+        <h4>Quadro Spotfy</h4>
+        <p>R$ 55,90</p>
+        <button onclick="adicionarAoCarrinho('Caneca Floral', 55.90)">Adicionar ao Carrinho</button>
+      </div>
+       <div class="produto">
+        <img src="quadro 4.jpg" alt="Caneca Personalizada">
+        <h4>Quadro Família</h4>
+        <p>R$ 55,90</p>
+        <button onclick="adicionarAoCarrinho('Caneca Floral', 55,90)">Adicionar ao Carrinho</button>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="carrinho" class="carrinho">
+    <h3>Seu Carrinho</h3>
+    <ul id="lista-carrinho"></ul>
+     <p id="total"></p>
+  <a id="link-whatsapp" href="#" target="_blank">
+  <button>
+    Finalizar no WhatsApp <img src="icone-de-whatsapp (2).png" alt="WhatsApp" style="height: 20px; vertical-align: middle; margin-right: 8px;">
+    </button>
+  </a>   
+  <button onclick="limparCarrinho()" class="limpar-carrinho"> Limpar Carrinho 🗑️</button>
+  </section>
+
+  <section id="contato" class="contato">
+    <h3>Fale Conosco</h3>
+    <form action="https://formspree.io/f/xwpblvdl" method="POST">
+      <label>Nome:</label>
+      <input type="text" name="nome" required>
+      <label>Email:</label>
+      <input type="email" name="email" required>
+      <label>Mensagem:</label>
+      <textarea name="mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+     <p>Acesse nosso Instagram
+      <a href="https://www.instagram.com/amoremarte._/" target="_blank"> 
+        <img src="Instagram_icon.png.webp" alt="Instagram" style="height: 24px; vertical-align: middle;">
+      </a>
+    </p>
+    <p>Ou nos chame no WhatsApp <a href="https://wa.me/5585991503775" target="_blank">
+       <img src="icone-de-whatsapp (2).png" alt="WhatsApp" style="height: 30px; vertical-align: middle;"></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Amor em Arte. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
