@@ -6,74 +6,88 @@ body {
   color: #333;
 }
 
-
+/* Navbar */
 .navbar {
   background-color: #bd7171;
-  padding: 1,5rem;
+  padding: 1rem;
   position: sticky;
   top: 0;
-  box-shadow: 10px 0px 10px #bd7171;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
   z-index: 99;
 }
 
 .navbar > div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .logo {
-    color: #ffffff;
-    font-family: 'Segoe UI', sans-serif;
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .logo span {
-    color: #eeab47;
-    font-family: 'Segoe UI', sans-serif;
+  color: #eeab47;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-nav li {
-    display: flex;
-    list-style: none;
-    align-items: center;
+/* Menu */
+.header-inner-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.nav-icon-container {
-    display: flex;
-    align-items: center;
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
 }
 
-.nav-icon-container img {
-    width: 30px;
-    cursor: pointer;
-}
-
-.nav-icon-container img:first-child{
-    margin-right: 1rem;
-}
-
-nav ul a {
-    color: #fff;
-    margin-right: 1.5rem;
-    cursor: pointer;
-}
-
-nav ul a:hover {
-    transform: translateY(-5px);
-    transition: all 0.2s;
-    font-weight: bold;
+.nav-links li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
 }
 
 .menu-button {
-    display: none;
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
 }
 
+/* Responsividade */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
 
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-button {
+    display: block;
+  }
+}
+
+/* Hero */
 .hero {
   background-color: #fae1dd;
   text-align: center;
-  padding: 50px 20px;
+  padding: 40px 20px;
 }
 
 .hero h2 {
@@ -86,6 +100,7 @@ nav ul a:hover {
   margin-top: 10px;
 }
 
+/* Seções */
 section {
   padding: 100px 60px;
 }
@@ -95,6 +110,7 @@ section {
   margin-bottom: 20px;
 }
 
+/* Grade de produtos */
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -136,6 +152,8 @@ section {
 .produto button:hover {
   background-color: #4e352d;
 }
+
+/* Botão WhatsApp */
 #link-whatsapp button {
   background-color: #ffffff; 
   color: #095f28; 
@@ -150,6 +168,7 @@ section {
   background-color: #88d3a5;
 }
 
+/* Rodapé */
 footer {
   background-color: #e8d1c5;
   text-align: center;
@@ -158,6 +177,7 @@ footer {
   color: #6a4e42;
 }
 
+/* Formulário */
 form input, form textarea {
   width: 100%;
   margin-bottom: 12px;
@@ -177,6 +197,11 @@ form button {
   cursor: pointer;
 }
 
+form button:hover {
+  background-color: #4e352d;
+}
+
+/* Botão Limpar Carrinho */
 .limpar-carrinho {
   background-color: #fcf7f7;
   color: rgb(243, 57, 57);
@@ -191,9 +216,7 @@ form button {
   background-color: #f7abab;
 }
 
-form button:hover {
-  background-color: #4e352d;
-}
+/* Botão Remover Item */
 .remover-item {
   background-color: #ff4444;
   color: white;
@@ -208,3 +231,4 @@ form button:hover {
 .remover-item:hover {
   background-color: #cc0000;
 }
+
