@@ -93,6 +93,7 @@ body {
 .hero h2 {
   font-size: 2em;
   color: #6a4e42;
+  margin-top: 100px;
 }
 
 .hero p {
