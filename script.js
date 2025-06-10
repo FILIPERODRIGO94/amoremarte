@@ -3,12 +3,10 @@ const listaCarrinho = document.getElementById('lista-carrinho');
 const totalEl = document.getElementById('total');
 const contador = document.getElementById('contador');
 
-// Salva o carrinho no localStorage
 function salvarCarrinho() {
   localStorage.setItem('carrinho', JSON.stringify(carrinho));
 }
 
-// Adiciona produto ao carrinho
 function adicionarAoCarrinho(nome, preco) {
   const existente = carrinho.find(item => item.nome === nome);
   if (existente) {
@@ -20,19 +18,15 @@ function adicionarAoCarrinho(nome, preco) {
   atualizarCarrinho();
 }
 
-// Remove produto pelo índice
 function removerDoCarrinho(index) {
-  if (index >= 0 && index < carrinho.length) {
-    carrinho.splice(index, 1);
-    salvarCarrinho();
-    atualizarCarrinho();
-  }
+  carrinho.splice(index, 1);
+  salvarCarrinho();
+  atualizarCarrinho();
 }
 
-// Altera quantidade do item
 function alterarQuantidade(index, novaQtd) {
   novaQtd = parseInt(novaQtd);
-  if (isNaN(novaQtd) || novaQtd <= 0) {
+  if (novaQtd <= 0) {
     removerDoCarrinho(index);
   } else {
     carrinho[index].quantidade = novaQtd;
@@ -41,14 +35,12 @@ function alterarQuantidade(index, novaQtd) {
   }
 }
 
-// Limpa todo o carrinho
 function limparCarrinho() {
   carrinho.length = 0;
   salvarCarrinho();
   atualizarCarrinho();
 }
 
-// Atualiza a visualização e mensagem do carrinho
 function atualizarCarrinho() {
   listaCarrinho.innerHTML = '';
   let total = 0;
@@ -73,11 +65,11 @@ function atualizarCarrinho() {
   contador.textContent = carrinho.reduce((sum, item) => sum + item.quantidade, 0);
 
   mensagem += `\n*Total:* R$ ${total.toFixed(2)}`;
-
+  
   const numeroWhatsApp = '5585991503775';
   const mensagemCodificada = encodeURIComponent(mensagem);
   const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensagemCodificada}`;
-
+  
   const link = document.getElementById('link-whatsapp');
   if (link) {
     link.href = urlWhatsApp;
@@ -86,16 +78,15 @@ function atualizarCarrinho() {
 
 // Inicializa o carrinho salvo ao carregar
 atualizarCarrinho();
-
-// Menu hambúrguer (responsivo)
-document.getElementById('menu-toggle')?.addEventListener('click', () => {
-  document.getElementById('nav-links')?.classList.toggle('active');
+// Botão hamburguer abre/fecha menu
+document.getElementById('menu-toggle').addEventListener('click', () => {
+  document.getElementById('nav-links').classList.toggle('active');
 });
 
-// Fecha o menu ao clicar em um item
+// Fecha menu ao clicar em um item (opcional e recomendado)
 document.querySelectorAll('#nav-links a').forEach(link => {
   link.addEventListener('click', () => {
-    document.getElementById('nav-links')?.classList.remove('active');
+    document.getElementById('nav-links').classList.remove('active');
   });
 });
 
