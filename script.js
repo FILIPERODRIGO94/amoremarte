@@ -89,5 +89,3 @@ document.querySelectorAll('#nav-links a').forEach(link => {
     document.getElementById('nav-links').classList.remove('active');
   });
 });
-
-
